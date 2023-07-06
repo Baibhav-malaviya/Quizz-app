@@ -27,9 +27,21 @@ function reducer(state, action) {
             : state.points,
       };
     case "finished":
-      return { ...state, status: "finished" };
+      return {
+        ...state,
+        status: "finished",
+        highscore: Math.max(state.points, state.highscore),
+      };
     case "nextBtn":
       return { ...state, idx: state.idx + 1, answer: null };
+    case "restart":
+      return { ...initialState, questions: state.questions, status: "ready" };
+    case "tick":
+      return {
+        ...state,
+        tick: state.tick - 1,
+        status: state.tick === 0 ? "finished" : state.status,
+      };
     default:
       throw new Error("Unknown action");
   }
@@ -40,12 +52,13 @@ const initialState = {
   idx: 0,
   answer: null,
   points: 0,
+  highscore: 0,
+  tick: 300,
 };
 
 export default function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const { questions, status, idx, answer, points } = state; //Destructuring the state object, can also be destructured in above line, but for now it is fine
-
+  const { questions, status, idx, answer, points, highscore, tick } = state; //Destructuring the state object, can also be destructured in above line, but for now it is fine
   const numQuestions = questions.length;
   const maxPossiblePoints = questions.reduce(
     (prev, curr) => prev + curr.points,
@@ -53,7 +66,7 @@ export default function App() {
   );
 
   useEffect(function () {
-    fetch(`http://localhost:8000/questions`)
+    fetch(`http://localhost:8000/govind`)
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payLoad: data }))
       .catch((err) => dispatch({ type: "dataFailed" }));
@@ -84,6 +97,7 @@ export default function App() {
               answer={answer}
               idx={idx}
               numQuestions={numQuestions}
+              tick={tick}
             />
           </>
         )}
@@ -91,6 +105,8 @@ export default function App() {
           <FinishedScreen
             points={points}
             maxPossiblePoints={maxPossiblePoints}
+            dispatch={dispatch}
+            highscore={highscore}
           />
         )}
       </Main>

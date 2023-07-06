@@ -135,5 +135,107 @@
       "correctOption": 3,
       "points": 20
     }
+  ],
+  "govind": [
+    {
+      "question": "Which one is the smallest ocean in the world?",
+      "options": ["Indian", "Pacific", "Atlantic", "Arctic"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "Which country gifted the 'Statue of liberty' to USA in 1886? ",
+      "options": ["France", "Canada", "Brazil", "England"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Dead sea is located between which two counties? ",
+      "options": [
+        "Jordan and Sudan",
+        "Jordan and Israel",
+        "Turkey and UAE",
+        "UAE and Egypt"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "In which ocean 'Bermuda triangle' region is located? ",
+      "options": ["Atlantic", "Indian", "Pacific", "Artic"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which country is known as the 'Playground of Europe'?",
+      "options": ["Austria", "Holland", "Switzerland", "Italy"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "Which country is also known as the 'Land of rising sun'?",
+      "options": ["Japan", "New zealand", "Fiji", "China"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which country known as the 'Land of thunderbolts'?",
+      "options": ["China", "Bhutan", "Mongolia", "Thailand"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which continent has the highest number of countries?",
+      "options": ["Asia", "Europe", "North America", "Africa"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "In which country, white elephant is found?",
+      "options": ["India", "Sri lanka", "Thailand", "Malaysia"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "Total Number of ocean in the world is ...",
+      "options": ["3", "5", "7", "9"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "Which plateau is known as the 'Roof of the world'?",
+      "options": ["Andes", "Himalaya", "Karakoram", "Pamir"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "Which one is the biggest island in the world?",
+      "options": ["Borneo", "Finland", "Sumatra", "Greenland"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "Which one is the largest tropical rain forest in the world?",
+      "options": [
+        "Amazon",
+        "Bosawas",
+        "Southeast Asian Rain Forest",
+        "Dain tree rain   forest"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "How many ways are there of getting out in cricket?",
+      "options": ["7", "8", "9", "10"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "How long is the wicket on a cricket pitch?",
+      "options": ["18 yards", "20 yards", "22 yards", "24 yards"],
+      "correctOption": 2,
+      "points": 10
+    }
   ]
 }

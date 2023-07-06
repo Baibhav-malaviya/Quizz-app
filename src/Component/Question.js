@@ -1,6 +1,7 @@
 import Options from "./Options";
+import Footer from "./Footer";
 
-function Question({ question, dispatch, answer, idx, numQuestions }) {
+function Question({ question, dispatch, answer, idx, numQuestions, tick }) {
   return (
     <>
       <div>
@@ -10,22 +11,14 @@ function Question({ question, dispatch, answer, idx, numQuestions }) {
         </h3>
       </div>
       <Options question={question} dispatch={dispatch} answer={answer} />
-      {answer !== null &&
-        (idx < numQuestions - 1 ? (
-          <button
-            className="btn btn-ui"
-            onClick={() => dispatch({ type: "nextBtn" })}
-          >
-            Next
-          </button>
-        ) : (
-          <button
-            className="btn btn-ui"
-            onClick={() => dispatch({ type: "finished" })}
-          >
-            Finish
-          </button>
-        ))}
+
+      <Footer
+        dispatch={dispatch}
+        answer={answer}
+        idx={idx}
+        numQuestions={numQuestions}
+        tick={tick}
+      />
     </>
   );
 }
